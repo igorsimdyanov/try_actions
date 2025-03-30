@@ -22,3 +22,18 @@ on:
         description: Environment to run tests against
         type: environment
         required: true
+
+jobs:
+  PutsJob:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Пробуем вывести введенные значения"
+
+      - name: List of inputs
+        run: |
+          echo "Homedirve ${{ input.homedrive }}"
+          echo "Log level ${{ input.logLevel }}"
+          echo "Tag source ${{ input.tag }}"
+          echo "Environment ${{ input.environment }}"
+        if: ${{ github.event_name == 'workflow_dispatch' }}
