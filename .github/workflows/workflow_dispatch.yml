@@ -32,8 +32,8 @@ jobs:
 
       - name: List of inputs
         run: |
-          echo "Homedirve ${{ input.homedrive }}"
-          echo "Log level ${{ input.logLevel }}"
-          echo "Tag source ${{ input.tag }}"
-          echo "Environment ${{ input.environment }}"
+          echo "Homedirve ${{ inputs.homedrive }}"
+          echo "Log level ${{ inputs.logLevel }}"
+          echo "Tag source ${{ inputs.tag }}"
+          echo "Environment ${{ inputs.environment }}"
         if: ${{ github.event_name == 'workflow_dispatch' }}
