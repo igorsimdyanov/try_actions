@@ -10,10 +10,7 @@ on:
         description: Log level
         default: warning
         type: choice
-        options:
-        - info
-        - warning
-        - debug
+        options: [info, warning, debug]
       tag:
         description: Apply tag after successfull test run
         required: true
